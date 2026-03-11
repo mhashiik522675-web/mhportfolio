@@ -8,7 +8,9 @@
 
 <title>M.H. Ashik | Data Specialist</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 <style>
 
@@ -20,257 +22,200 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-
+background:#020617;
 color:white;
-
 overflow-x:hidden;
+}
 
+/* particles */
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
 }
 
 /* navbar */
 
 nav{
-
 position:fixed;
-
 top:0;
-
 width:100%;
-
-background:rgba(0,0,0,0.4);
-
-padding:18px 40px;
-
+background:rgba(0,0,0,0.6);
+padding:20px 40px;
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
 backdrop-filter:blur(10px);
-
+z-index:1000;
 }
 
 nav h2{
-
-color:#00e5ff;
-
+font-family:'Orbitron';
+color:#00ffff;
 }
 
 nav ul{
-
 display:flex;
-
 gap:25px;
-
 list-style:none;
-
 }
 
 nav a{
-
 text-decoration:none;
-
 color:white;
-
-font-size:14px;
-
 }
 
 nav a:hover{
-
-color:#00e5ff;
-
+color:#00ffff;
 }
 
 /* hero */
 
 header{
-
 height:100vh;
-
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
-
 align-items:center;
-
 text-align:center;
-
-padding:20px;
-
 }
 
 .profile{
-
 width:150px;
-
 height:150px;
-
 border-radius:50%;
-
-border:4px solid #00e5ff;
-
-box-shadow:0 0 25px #00e5ff;
-
-margin-bottom:25px;
-
-}
-
-header h1{
-
-font-size:45px;
-
-margin-bottom:10px;
-
+border:4px solid #00ffff;
+box-shadow:0 0 25px #00ffff;
+margin-bottom:20px;
 }
 
 .typing{
-
-color:#00e5ff;
-
+color:#00ffff;
 font-weight:600;
-
+margin:10px 0;
 }
 
 .btn{
-
-padding:12px 26px;
-
+padding:12px 28px;
 border-radius:30px;
-
-background:#00e5ff;
-
-color:#000;
-
+background:#00ffff;
+color:black;
 text-decoration:none;
-
 font-weight:600;
-
-margin:6px;
-
 }
 
-/* section */
+/* sections */
 
 section{
-
-padding:90px 20px;
-
+padding:100px 20px;
 max-width:1100px;
-
 margin:auto;
-
 }
 
 h2{
-
 text-align:center;
-
 margin-bottom:40px;
-
-font-size:34px;
-
+font-size:36px;
+font-family:'Orbitron';
 }
 
-/* grid */
+/* cards */
 
 .grid{
-
 display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
-
 }
 
 .card{
-
-background:rgba(255,255,255,0.08);
-
-padding:28px;
-
-border-radius:14px;
-
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
 text-align:center;
-
-backdrop-filter:blur(10px);
-
+transition:.4s;
 }
 
 .card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 25px #00ffff;
+}
 
-transform:translateY(-8px);
+/* skill bars */
 
+.skill{
+margin:20px 0;
+}
+
+.bar{
+height:10px;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#00ffff,#38bdf8);
+box-shadow:0 0 15px #00ffff;
+border-radius:20px;
+animation:load 2s ease;
+}
+
+@keyframes load{
+from{width:0}
 }
 
 /* pricing */
 
 .price{
-
-font-size:36px;
-
-color:#00e5ff;
-
-margin:12px 0;
-
+font-size:34px;
+color:#00ffff;
+margin:10px 0;
 }
 
 /* contact */
 
 .contact-box{
-
-background:rgba(255,255,255,0.08);
-
+background:rgba(255,255,255,0.05);
 padding:40px;
-
 border-radius:15px;
-
 text-align:center;
+}
 
+/* cursor */
+
+.cursor{
+position:fixed;
+width:25px;
+height:25px;
+border:2px solid #00ffff;
+border-radius:50%;
+pointer-events:none;
+box-shadow:0 0 15px #00ffff;
+z-index:9999;
 }
 
 /* whatsapp */
 
 .whatsapp{
-
 position:fixed;
-
 bottom:25px;
-
 right:25px;
-
 background:#25D366;
-
 color:white;
-
 font-size:24px;
-
 padding:14px 16px;
-
 border-radius:50%;
-
 text-decoration:none;
-
 }
 
-/* footer */
-
 footer{
-
 text-align:center;
-
 padding:30px;
-
-background:rgba(0,0,0,0.3);
-
-margin-top:40px;
-
 }
 
 </style>
@@ -279,6 +224,8 @@ margin-top:40px;
 
 <body>
 
+<div id="particles-js"></div>
+
 <nav>
 
 <h2>ASHIK</h2>
@@ -286,15 +233,9 @@ margin-top:40px;
 <ul>
 
 <li><a href="#home">Home</a></li>
-
 <li><a href="#skills">Skills</a></li>
-
 <li><a href="#about">About</a></li>
-
-<li><a href="#portfolio">Portfolio</a></li>
-
 <li><a href="#pricing">Pricing</a></li>
-
 <li><a href="#contact">Contact</a></li>
 
 </ul>
@@ -309,7 +250,9 @@ margin-top:40px;
 
 <p class="typing" id="typing"></p>
 
-<p>Transforming raw data into structured reports and dashboards.</p>
+<p>Professional Data Entry & Excel Specialist</p>
+
+<br>
 
 <a class="btn" href="https://wa.me/8801793312865">Hire Me</a>
 
@@ -319,19 +262,51 @@ margin-top:40px;
 
 <h2>Professional Skills</h2>
 
-<div class="grid">
+<div class="skill">
 
-<div class="card">Pivot Table Creation</div>
+<p>Excel Expert</p>
 
-<div class="card">Excel Expert</div>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
 
-<div class="card">Data Validation & Error Fixing</div>
+</div>
 
-<div class="card">Data Sorting & Structuring</div>
+<div class="skill">
 
-<div class="card">Report Ready Formatting</div>
+<p>Pivot Table Creation</p>
 
-<div class="card">Dashboard Preparation</div>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<p>Data Validation</p>
+
+<div class="bar"><div class="fill" style="width:92%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<p>Data Sorting & Structuring</p>
+
+<div class="bar"><div class="fill" style="width:94%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<p>Report Ready Formatting</p>
+
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<p>Dashboard Preparation</p>
+
+<div class="bar"><div class="fill" style="width:88%"></div></div>
 
 </div>
 
@@ -343,27 +318,7 @@ margin-top:40px;
 
 <div class="card">
 
-<p>Hello! I'm <b>M.H. Ashik</b>, a professional Data Entry and Excel Specialist.</p>
-
-<p>I help businesses clean and organize data so it becomes easy to understand and ready for reports.</p>
-
-</div>
-
-</section>
-
-<section id="portfolio">
-
-<h2>Recent Projects</h2>
-
-<div class="grid">
-
-<div class="card">E-commerce Product Data Entry</div>
-
-<div class="card">Large Excel Data Cleaning</div>
-
-<div class="card">Lead Generation Research</div>
-
-<div class="card">Business Dashboard Creation</div>
+<p>Hello! I'm <b>M.H. Ashik</b>, a professional Data Specialist helping businesses organize and clean data for better insights.</p>
 
 </div>
 
@@ -379,13 +334,9 @@ margin-top:40px;
 
 <h3>Basic</h3>
 
-<div class="price">$15</div>
+<div class="price">$10</div>
 
 <p>1000 Rows Data Entry</p>
-
-<p>Data Cleaning</p>
-
-<p>Basic Pivot Table</p>
 
 <br>
 
@@ -397,13 +348,9 @@ margin-top:40px;
 
 <h3>Standard</h3>
 
-<div class="price">$40</div>
+<div class="price">$30</div>
 
 <p>3000 Rows Data Entry</p>
-
-<p>Advanced Cleaning</p>
-
-<p>Pivot Tables</p>
 
 <br>
 
@@ -415,13 +362,9 @@ margin-top:40px;
 
 <h3>Premium</h3>
 
-<div class="price">$60</div>
+<div class="price">$50</div>
 
-<p>10000+ Rows</p>
-
-<p>Full Data Processing</p>
-
-<p>Dashboard Preparation</p>
+<p>10000+ Rows + Dashboard</p>
 
 <br>
 
@@ -435,19 +378,19 @@ margin-top:40px;
 
 <section id="contact">
 
-<h2>Contact Me</h2>
+<h2>Contact</h2>
 
 <div class="contact-box">
 
 <p>Email: mhashiiik522675@gmail.com</p>
 
-<p>Phone / WhatsApp: 01793312865</p>
+<p>Phone: 01793312865</p>
 
 <p>Fiverr: https://www.fiverr.com/s/zWEwpY3</p>
 
 <br>
 
-<a class="btn" href="https://wa.me/8801793312865">Message On WhatsApp</a>
+<a class="btn" href="https://wa.me/8801793312865">Message on WhatsApp</a>
 
 </div>
 
@@ -455,23 +398,25 @@ margin-top:40px;
 
 <footer>
 
-<p>© 2026 M.H. Ashik | Data Specialist</p>
+<p>© 2026 M.H. Ashik</p>
 
 </footer>
 
-<a href="https://wa.me/8801793312865" class="whatsapp">💬</a>
+<a class="whatsapp" href="https://wa.me/8801793312865">💬</a>
+
+<div class="cursor"></div>
 
 <script>
 
-const text = "Data Specialist & Excel Expert";
+const text="Data Specialist & Excel Expert";
 
-let i = 0;
+let i=0;
 
 function typing(){
 
-if(i < text.length){
+if(i<text.length){
 
-document.getElementById("typing").innerHTML += text.charAt(i);
+document.getElementById("typing").innerHTML+=text.charAt(i);
 
 i++;
 
@@ -482,6 +427,38 @@ setTimeout(typing,80);
 }
 
 typing();
+
+/* cursor */
+
+const cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove",e=>{
+
+cursor.style.top=e.clientY+"px";
+
+cursor.style.left=e.clientX+"px";
+
+});
+
+/* particles */
+
+tsParticles.load("particles-js",{
+
+background:{color:"#020617"},
+
+particles:{
+
+number:{value:80},
+
+color:{value:"#00ffff"},
+
+links:{enable:true,color:"#00ffff"},
+
+move:{enable:true,speed:2}
+
+}
+
+});
 
 </script>
 
