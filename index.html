@@ -3,188 +3,317 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M.H. Ashik | Data Entry Specialist</title>
+<title>M.H. Ashik | Data Specialist</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#333}
 
-header{
-background:linear-gradient(135deg,#2563eb,#1e3a8a);
+body{
+font-family:'Poppins',sans-serif;
+background:#06101b;
 color:white;
-padding:80px 20px;
-text-align:center
+overflow-x:hidden;
 }
 
-header h1{font-size:42px;margin-bottom:10px}
-header p{font-size:18px;opacity:.9}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 24px;
-background:white;
-color:#1e3a8a;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:.3s
+/* animated background */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#0b2a4a 1px,transparent 1px);
+background-size:40px 40px;
+animation:moveBg 60s linear infinite;
+opacity:.35;
 }
 
-.btn:hover{transform:translateY(-3px)}
+@keyframes moveBg{
+0%{transform:translate(0,0)}
+100%{transform:translate(-500px,-500px)}
+}
 
 nav{
-background:#111827;
-padding:15px;
-text-align:center
+position:fixed;
+top:0;
+width:100%;
+background:#040b14;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000
+}
+
+nav h2{
+color:#2dd4ff;
+letter-spacing:1px
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px
 }
 
 nav a{
-color:white;
-margin:0 15px;
 text-decoration:none;
-font-weight:500
+color:white;
+font-size:14px;
+opacity:.8;
+transition:.3s
+}
+
+nav a:hover{
+opacity:1;
+color:#2dd4ff
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px
+}
+
+.profile{
+width:150px;
+height:150px;
+border-radius:50%;
+border:3px solid #2dd4ff;
+box-shadow:0 0 30px #2dd4ff;
+margin-bottom:25px;
+object-fit:cover
+}
+
+header h1{
+font-size:42px;
+margin-bottom:10px
+}
+
+header p{
+opacity:.8;
+margin-bottom:20px
+}
+
+.btn{
+padding:12px 26px;
+border-radius:30px;
+background:#2dd4ff;
+color:#03101b;
+text-decoration:none;
+font-weight:600;
+margin:6px;
+display:inline-block;
+transition:.3s
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 15px #2dd4ff
 }
 
 section{
+padding:90px 20px;
 max-width:1100px;
-margin:auto;
-padding:60px 20px
+margin:auto
 }
 
 h2{
 text-align:center;
-margin-bottom:40px;
-font-size:32px
+margin-bottom:45px;
+font-size:34px;
+color:#e6f7ff
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:25px
 }
 
 .card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:.3s
+background:#0b1a2b;
+padding:28px;
+border-radius:14px;
+text-align:center;
+transition:.3s;
+border:1px solid rgba(255,255,255,.05)
 }
 
-.card:hover{transform:translateY(-6px)}
-
-.skills span{
-display:block;margin:8px 0}
-
-.bar{
-height:8px;
-background:#e5e7eb;
-border-radius:20px;
-overflow:hidden
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(45,212,255,.25)
 }
 
-.fill{
-height:100%;
-background:#2563eb
+.skills .card{
+font-size:15px
+}
+
+.pricing .price{
+font-size:36px;
+color:#2dd4ff;
+margin:12px 0
+}
+
+.pricing .card p{
+margin:6px 0;
+opacity:.8
 }
 
 .contact-box{
-text-align:center;
-background:white;
+background:#0b1a2b;
 padding:40px;
 border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08)
+text-align:center
+}
+
+.contact-box p{
+margin:8px 0;
+opacity:.9
 }
 
 footer{
-background:#111827;
-color:white;
 text-align:center;
-padding:25px;
-margin-top:40px
+padding:30px;
+background:#040b14;
+margin-top:40px;
+font-size:14px;
+opacity:.8
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>M.H. Ashik</h1>
-<p>Professional Data Entry Specialist</p>
-<p>Fast • Accurate • Reliable</p>
-<a class="btn" href="https://www.fiverr.com/s/zWEwpY3" target="_blank">Hire Me on Fiverr</a>
-</header>
-
 <nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#skills">Skills</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#contact">Contact</a>
+<h2>ASHIK</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
-<section id="about">
-<h2>About Me</h2>
-<div class="card">
-<p>Hello! I'm M.H. Ashik, a professional Data Entry Specialist who helps businesses organize and manage their data accurately and efficiently.</p>
-<br>
-<p>I specialize in Excel work, web research, copy-paste tasks, and data cleaning. My goal is to deliver high-quality work quickly and accurately.</p>
-</div>
-</section>
+<header id="home">
 
-<section id="services">
-<h2>My Services</h2>
-<div class="grid">
-<div class="card">Data Entry</div>
-<div class="card">Copy Paste Work</div>
-<div class="card">PDF to Excel / Word</div>
-<div class="card">Web Research</div>
-<div class="card">Data Cleaning</div>
-<div class="card">Product Listing</div>
-</div>
-</section>
+<img class="profile" src="https://i.imgur.com/4Z7q9oA.png">
 
-<section id="skills">
+<h1>M.H. Ashik</h1>
+
+<p>Data Specialist & Excel Expert</p>
+
+<p>Transforming raw data into structured, professional reports and dashboards.</p>
+
+<a class="btn" href="https://www.fiverr.com/s/zWEwpY3" target="_blank">Hire Me</a>
+<a class="btn" href="#pricing">View Pricing</a>
+
+</header>
+
+<section id="skills" class="skills">
+
 <h2>Professional Skills</h2>
-<div class="card skills">
-<span>Excel</span>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
 
-<span>Data Entry</span>
-<div class="bar"><div class="fill" style="width:95%"></div></div>
+<div class="grid">
 
-<span>Web Research</span>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
+<div class="card">Pivot Table Creation</div>
+<div class="card">Excel Expert</div>
+<div class="card">Data Validation & Error Fixing</div>
+<div class="card">Data Sorting & Structuring</div>
+<div class="card">Report Ready Formatting</div>
+<div class="card">Dashboard Preparation</div>
 
-<span>Data Cleaning</span>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
 </div>
+
 </section>
 
-<section id="portfolio">
-<h2>Portfolio</h2>
-<div class="grid">
-<div class="card">1000+ Product Data Entry Project</div>
-<div class="card">Large Excel Data Cleaning Project</div>
-<div class="card">PDF to Excel Conversion</div>
-<div class="card">Web Research Lead Collection</div>
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="card">
+
+<p>Hello! I'm <b>M.H. Ashik</b>, a professional Data Entry and Excel Specialist.</p>
+<br>
+<p>I help businesses clean, structure and analyze their data so it becomes clear, accurate and ready for decision making.</p>
+<br>
+<p>I specialize in Excel automation, pivot tables, dashboard preparation and advanced data formatting.</p>
+
 </div>
+
+</section>
+
+<section id="pricing" class="pricing">
+
+<h2>Pricing Plans</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Basic</h3>
+<div class="price">$15</div>
+<p>Up to 1000 rows</p>
+<p>Data Cleaning</p>
+<p>Basic Pivot Table</p>
+<p>24 Hour Delivery</p>
+<br>
+<a class="btn" href="https://wa.me/8801793312865">Order</a>
+</div>
+
+<div class="card">
+<h3>Standard</h3>
+<div class="price">$40</div>
+<p>Up to 3000 rows</p>
+<p>Advanced Data Cleaning</p>
+<p>Pivot Tables</p>
+<p>CSV Merge / Split</p>
+<br>
+<a class="btn" href="https://wa.me/8801793312865">Order</a>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<div class="price">$60</div>
+<p>10000+ Rows</p>
+<p>Full Data Processing</p>
+<p>Dashboard Preparation</p>
+<p>Priority Delivery</p>
+<br>
+<a class="btn" href="https://wa.me/8801793312865">Order</a>
+</div>
+
+</div>
+
 </section>
 
 <section id="contact">
+
 <h2>Contact Me</h2>
+
 <div class="contact-box">
+
 <p><b>Email:</b> mhashiiik522675@gmail.com</p>
-<br>
+<p><b>Phone / WhatsApp:</b> 01793312865</p>
 <p><b>Fiverr:</b> https://www.fiverr.com/s/zWEwpY3</p>
+
 <br>
-<a class="btn" href="https://www.fiverr.com/s/zWEwpY3" target="_blank">Order My Service</a>
+
+<a class="btn" href="https://wa.me/8801793312865" target="_blank">Message On WhatsApp</a>
+
 </div>
+
 </section>
 
 <footer>
-<p>© 2026 M.H. Ashik | Data Entry Specialist</p>
+
+<p>© 2026 M.H. Ashik | Data Entry & Excel Specialist</p>
+
 </footer>
 
 </body>
