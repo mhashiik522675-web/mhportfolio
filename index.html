@@ -2,12 +2,14 @@
 
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>M.H. Ashik | Data Specialist</title>
+<title>M.H. Ashik | Data Entry Specialist</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 <style>
@@ -137,21 +139,34 @@ box-shadow:0 0 20px #00ffff;
 
 /* SKILL BARS */
 
-.skill{
-margin:20px 0;
+.skill-box{
+margin-bottom:25px;
 }
 
-.bar{
-height:10px;
+.skill-title{
+display:flex;
+justify-content:space-between;
+margin-bottom:6px;
+font-weight:600;
+}
+
+.skill-bar{
+height:12px;
 background:#1e293b;
 border-radius:20px;
 overflow:hidden;
 }
 
-.fill{
+.skill-fill{
 height:100%;
-background:linear-gradient(90deg,#00ffff,#38bdf8);
-box-shadow:0 0 15px #00ffff;
+background:linear-gradient(90deg,#00ffff,#00ff99);
+box-shadow:0 0 10px #00ffff,0 0 20px #00ffff;
+border-radius:20px;
+animation:grow 2s ease;
+}
+
+@keyframes grow{
+from{width:0}
 }
 
 /* PRICING */
@@ -171,7 +186,7 @@ ul li{
 margin:6px 0;
 }
 
-/* CONTACT */
+/* CONTACT BAR */
 
 .contact-bar{
 display:block;
@@ -217,6 +232,7 @@ padding:30px;
 <div id="particles-js"></div>
 
 <nav>
+
 <h2>ASHIK</h2>
 
 <ul>
@@ -226,13 +242,15 @@ padding:30px;
 <li><a href="#pricing">Pricing</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+
 </nav>
 
 <header id="home">
 
-<img class="profile" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0d">
+<img class="profile" src="https://i.imgur.com/4Z7q9oA.png">
 
 <h1>M.H. Ashik</h1>
+
 <p>Professional Data Entry & Excel Specialist</p>
 
 <br>
@@ -245,34 +263,34 @@ padding:30px;
 
 <h2>Professional Skills</h2>
 
-<div class="skill">
-<p>Excel Expert</p>
-<div class="bar"><div class="fill" style="width:95%"></div></div>
+<div class="skill-box">
+<div class="skill-title"><span>Excel Expert</span><span>95%</span></div>
+<div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
 </div>
 
-<div class="skill">
-<p>Pivot Table Creation</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
+<div class="skill-box">
+<div class="skill-title"><span>Pivot Table Creation</span><span>90%</span></div>
+<div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
 </div>
 
-<div class="skill">
-<p>Data Validation</p>
-<div class="bar"><div class="fill" style="width:92%"></div></div>
+<div class="skill-box">
+<div class="skill-title"><span>Data Validation</span><span>92%</span></div>
+<div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
 </div>
 
-<div class="skill">
-<p>Data Sorting & Structuring</p>
-<div class="bar"><div class="fill" style="width:94%"></div></div>
+<div class="skill-box">
+<div class="skill-title"><span>Data Sorting & Structuring</span><span>94%</span></div>
+<div class="skill-bar"><div class="skill-fill" style="width:94%"></div></div>
 </div>
 
-<div class="skill">
-<p>Report Ready Formatting</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
+<div class="skill-box">
+<div class="skill-title"><span>Report Ready Formatting</span><span>90%</span></div>
+<div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
 </div>
 
-<div class="skill">
-<p>Dashboard Preparation</p>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
+<div class="skill-box">
+<div class="skill-title"><span>Dashboard Preparation</span><span>88%</span></div>
+<div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
 </div>
 
 </section>
@@ -352,7 +370,13 @@ My expertise includes pivot tables, data cleaning, dashboard preparation and pro
 
 <div class="grid">
 
-<a class="contact-bar" href="mailto:mhashiiik522675@gmail.com">📧 Email</a> <a class="contact-bar" href="tel:+8801793312865">📞 Phone</a> <a class="contact-bar" href="https://wa.me/8801793312865">💬 WhatsApp</a> <a class="contact-bar" href="https://www.fiverr.com/s/zWEwpY3">🟢 Fiverr</a>
+<a class="contact-bar" href="mailto:mhashiiik522675@gmail.com">📧 Email</a>
+
+<a class="contact-bar" href="tel:+8801793312865">📞 Phone</a>
+
+<a class="contact-bar" href="https://wa.me/8801793312865">💬 WhatsApp</a>
+
+<a class="contact-bar" href="https://www.fiverr.com/s/zWEwpY3">🟢 Fiverr</a>
 
 </div>
 
