@@ -111,7 +111,7 @@ font-weight:600;
 /* sections */
 
 section{
-padding:100px 20px;
+padding:120px 20px;
 max-width:1100px;
 margin:auto;
 }
@@ -177,13 +177,33 @@ color:#00ffff;
 margin:10px 0;
 }
 
-/* contact */
+ul{
+list-style:none;
+margin-top:10px;
+}
 
-.contact-box{
+ul li{
+margin:5px 0;
+}
+
+/* contact bars */
+
+.contact-bar{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:15px;
+border-radius:10px;
 background:rgba(255,255,255,0.05);
-padding:40px;
-border-radius:15px;
-text-align:center;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.contact-bar:hover{
+box-shadow:0 0 20px #00ffff;
+transform:translateY(-5px);
 }
 
 /* cursor */
@@ -263,51 +283,33 @@ padding:30px;
 <h2>Professional Skills</h2>
 
 <div class="skill">
-
 <p>Excel Expert</p>
-
 <div class="bar"><div class="fill" style="width:95%"></div></div>
-
 </div>
 
 <div class="skill">
-
 <p>Pivot Table Creation</p>
-
 <div class="bar"><div class="fill" style="width:90%"></div></div>
-
 </div>
 
 <div class="skill">
-
 <p>Data Validation</p>
-
 <div class="bar"><div class="fill" style="width:92%"></div></div>
-
 </div>
 
 <div class="skill">
-
 <p>Data Sorting & Structuring</p>
-
 <div class="bar"><div class="fill" style="width:94%"></div></div>
-
 </div>
 
 <div class="skill">
-
 <p>Report Ready Formatting</p>
-
 <div class="bar"><div class="fill" style="width:90%"></div></div>
-
 </div>
 
 <div class="skill">
-
 <p>Dashboard Preparation</p>
-
 <div class="bar"><div class="fill" style="width:88%"></div></div>
-
 </div>
 
 </section>
@@ -318,7 +320,17 @@ padding:30px;
 
 <div class="card">
 
-<p>Hello! I'm <b>M.H. Ashik</b>, a professional Data Specialist helping businesses organize and clean data for better insights.</p>
+<p>
+
+Hello! I'm <b>M.H. Ashik</b>, a dedicated Data Entry and Excel Specialist.  
+I help businesses transform messy data into clean, structured reports.
+
+My expertise includes Excel data cleaning, pivot tables, data validation,
+dashboard preparation and professional report formatting.
+
+I focus on accuracy, fast delivery and high quality work.
+
+</p>
 
 </div>
 
@@ -332,43 +344,61 @@ padding:30px;
 
 <div class="card">
 
-<h3>Basic</h3>
+<h3>BASIC</h3>
 
-<div class="price">$10</div>
+<div class="price">$10 USDT</div>
 
-<p>1000 Rows Data Entry</p>
+<ul>
+<li>✔ Up to 1,000 Rows</li>
+<li>✔ Data Cleaning & Formatting</li>
+<li>✔ Basic Pivot Tables</li>
+<li>✔ 24 Hours Delivery</li>
+<li>✔ 1 Revision</li>
+</ul>
 
 <br>
 
-<a class="btn" href="https://wa.me/8801793312865">Order</a>
+<a class="btn" href="https://wa.me/8801793312865">Get Started</a>
 
 </div>
 
 <div class="card">
 
-<h3>Standard</h3>
+<h3>STANDARD</h3>
 
-<div class="price">$30</div>
+<div class="price">$30 USDT</div>
 
-<p>3000 Rows Data Entry</p>
+<ul>
+<li>✔ Up to 3,000 Rows</li>
+<li>✔ Advanced Data Cleaning</li>
+<li>✔ Complex Pivot Tables</li>
+<li>✔ CSV Merge / Split</li>
+<li>✔ 48 Hours Delivery</li>
+</ul>
 
 <br>
 
-<a class="btn" href="https://wa.me/8801793312865">Order</a>
+<a class="btn" href="https://wa.me/8801793312865">Get Started</a>
 
 </div>
 
 <div class="card">
 
-<h3>Premium</h3>
+<h3>PREMIUM</h3>
 
-<div class="price">$50</div>
+<div class="price">$50 USDT</div>
 
-<p>10000+ Rows + Dashboard</p>
+<ul>
+<li>✔ 10,000+ Rows</li>
+<li>✔ Complete Data Processing</li>
+<li>✔ Dashboard Preparation</li>
+<li>✔ Automation Setup</li>
+<li>✔ Unlimited Revisions</li>
+</ul>
 
 <br>
 
-<a class="btn" href="https://wa.me/8801793312865">Order</a>
+<a class="btn" href="https://wa.me/8801793312865">Get Started</a>
 
 </div>
 
@@ -380,17 +410,15 @@ padding:30px;
 
 <h2>Contact</h2>
 
-<div class="contact-box">
+<div class="grid">
 
-<p>Email: mhashiiik522675@gmail.com</p>
+<a class="contact-bar" href="mailto:mhashiiik522675@gmail.com">📧 Email</a>
 
-<p>Phone: 01793312865</p>
+<a class="contact-bar" href="tel:+8801793312865">📞 Phone</a>
 
-<p>Fiverr: https://www.fiverr.com/s/zWEwpY3</p>
+<a class="contact-bar" href="https://wa.me/8801793312865">💬 WhatsApp</a>
 
-<br>
-
-<a class="btn" href="https://wa.me/8801793312865">Message on WhatsApp</a>
+<a class="contact-bar" href="https://www.fiverr.com/s/zWEwpY3">🟢 Fiverr</a>
 
 </div>
 
@@ -409,55 +437,32 @@ padding:30px;
 <script>
 
 const text="Data Specialist & Excel Expert";
-
 let i=0;
 
 function typing(){
-
 if(i<text.length){
-
 document.getElementById("typing").innerHTML+=text.charAt(i);
-
 i++;
-
 setTimeout(typing,80);
-
 }
-
 }
 
 typing();
 
-/* cursor */
-
 const cursor=document.querySelector(".cursor");
 
 document.addEventListener("mousemove",e=>{
-
 cursor.style.top=e.clientY+"px";
-
 cursor.style.left=e.clientX+"px";
-
 });
 
-/* particles */
-
 tsParticles.load("particles-js",{
-
-background:{color:"#020617"},
-
 particles:{
-
 number:{value:80},
-
 color:{value:"#00ffff"},
-
 links:{enable:true,color:"#00ffff"},
-
 move:{enable:true,speed:2}
-
 }
-
 });
 
 </script>
